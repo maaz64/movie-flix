@@ -1,0 +1,47 @@
+.review-page{
+  width: 100vw;
+  height: 100vh;
+}
+.main-img{
+    margin: 10px;
+    width: 100%;
+    
+}
+
+.main-img img{
+    height: 40vh;
+    width: 100%;
+    object-fit: none;
+   
+}
+
+.detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    height: 40%;
+    border-radius: 5px;
+    margin:auto;
+    background-color: #fff;
+}
+
+.detail .title, .review-list .title {
+    padding: 10px 20px;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .detail .desc {
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  .detail .release_year {
+    margin-top: 20px;
+    padding: 0 20px;
+    font-weight: 500;
+    color: rgb(0, 75, 0);
+  }
+
+  

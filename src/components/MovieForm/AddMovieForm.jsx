@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { addMovie, movieSelector, updateMovie } from '../features/movieSlice';
+import { addMovie, movieSelector, updateMovie } from '../../features/movieSlice';
 
 function AddMovieForm({ movieToBeUpdated }) {
 
@@ -12,6 +12,7 @@ function AddMovieForm({ movieToBeUpdated }) {
             setFormData(movies[movieToBeUpdated]);
         }
     }, [])
+
 
     const [formData, setFormData] = useState({
         title: "",
@@ -68,7 +69,7 @@ function AddMovieForm({ movieToBeUpdated }) {
                     <input type="text" name="release_year" value={formData.release_year} onChange={handleChange} placeholder='Release Year' required />
                 </div>
                 <div className=" desc">
-                    <textarea name="desc" value={formData.desc} onChange={handleChange} cols="20" rows="5" required>Description</textarea>
+                    <textarea name="desc" value={formData.desc} onChange={handleChange} placeholder="Description" cols="20" rows="5" required>Description</textarea>
                 </div>
                 <div className="add-movie-form-btn">
 

@@ -3,7 +3,7 @@ import { decRating, incRating, removeMovie, togglewatch } from "../../features/m
 import { useNavigate } from "react-router-dom";
 
 
-function MovieCard({movie,index, setMovieTobeUpdated}) {
+function MovieCard({movie,index, setMovieTobeUpdated, setSelectedMovieCard}) {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -27,7 +27,8 @@ function MovieCard({movie,index, setMovieTobeUpdated}) {
               <div className="plot">{movie.desc.slice(0,195)}</div>
               <div className="release_year">{movie.release_year}</div>
               <div className="footer">
-                <div className="rating">{movie.rating}</div>
+                <div className="review" onClick={()=>{navigate('/review-form'); setSelectedMovieCard(index)}}>Add Review</div>
+                <div className="review" onClick={()=>{navigate('/reviews'); setSelectedMovieCard(index)}}>Check Reviews</div>
                 <div className="star-dis">
                   <img
                     src="https://cdn-icons-png.flaticon.com/128/43/43625.png"

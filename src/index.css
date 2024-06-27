@@ -23,6 +23,56 @@ h1 {
   padding: 0 20px;
   box-sizing: border-box;
 }
+
+/* navbar */
+
+
+.navbar{
+  height: 9vh;
+  width: 100vw;
+  background: linear-gradient(45deg,red,blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .title{
+  margin-left:30px ;
+  padding: 20px;
+  color: white;
+}
+
+
+
+.add-btn, .home-btn{
+  margin-right:30px;
+  padding:10px;
+  display: flex;
+  align-items: center;
+}
+
+.add-btn img, .home-btn img{
+  width:30px;
+  height: 30px;
+  color:white;
+  cursor: pointer;
+}
+
+.add-btn span, .home-btn span {
+  margin-left: 4px;
+  padding: 4px;
+  font-size: large;
+  color: white;
+}
+
+.rightNav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* movie card */
+
 .movie-card {
   background: #fff;
   padding: 0;
@@ -71,26 +121,32 @@ h1 {
   padding: 10px 20px;
   box-sizing: border-box;
 }
-.footer .rating {
-  font-size: 20px;
+.footer {
+  font-size: 15px;
   font-weight: 600;
   flex: 1;
 }
+.review{
+  font-size: 15px;
+  font-weight: 600;
+  flex: 1;
+  cursor: pointer;
+}
 
-.footer .stars {
+.footer .stars, .add-movie .stars {
   width: 20px;
   height: 20px;
 }
 
 
-.footer .star-dis {
+.footer .star-dis, .add-movie .star-dis {
   font-size: 20px;
   font-weight: 600;
   flex: 1;
   position: relative;
 }
 
-footer.starCount {
+.footer.starCount, .add-movie .starCount {
   font-size: 20px;
   font-weight: 600;
   position: absolute;
@@ -104,6 +160,11 @@ footer.starCount {
 .footer .str-btn {
   width: 7px;
   height: 7px;
+}
+
+.add-movie .str-btn{
+  width: 15px;
+  height: 15px;
 }
 .footer button {
   font-size: 15px;

@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { movies } from "../movieData";
+import data from '../data.json';
 
 const initialState = {
-  movies,
+  movies:data
 };
 
 const movieSlice = createSlice({
@@ -38,6 +38,10 @@ const movieSlice = createSlice({
     updateMovie:(state,action)=>{
       const {index, movie} = action.payload;
       state.movies[index] = movie;
+    },
+    addFeedback:(state, action)=>{
+      const {index,feedback} = action.payload;
+      state.movies[index].reviews.push(feedback);
     }
     
   },
@@ -46,6 +50,6 @@ const movieSlice = createSlice({
 
 export const movieReducer = movieSlice.reducer;
 
-export const {addMovie, setMovies, incRating, decRating, togglewatch, removeMovie, updateMovie} = movieSlice.actions;
+export const {addMovie, setMovies, incRating, decRating, togglewatch, removeMovie, updateMovie, addFeedback} = movieSlice.actions;
 
 export const movieSelector = (state)=>state.movieReducer.movies;

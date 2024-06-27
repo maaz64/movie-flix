@@ -5,7 +5,7 @@ import { movieSelector } from '../../features/movieSlice'
 
 
 
-function MovieList({setMovieTobeUpdated}) {
+function MovieList({setMovieTobeUpdated, setSelectedMovieCard}) {
   const movies = useSelector(movieSelector)
   return (
     <>
@@ -15,6 +15,7 @@ function MovieList({setMovieTobeUpdated}) {
                 movie={movie}
                 index={index} 
                 setMovieTobeUpdated={setMovieTobeUpdated}
+                setSelectedMovieCard={setSelectedMovieCard}
                 />
             )}
     </>
